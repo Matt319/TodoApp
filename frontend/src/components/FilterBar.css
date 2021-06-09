@@ -1,0 +1,15 @@
+.filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.bar-element {
+  margin-right: 10px;
+  height: 100%;
+  flex-grow: 0;
+}
+
+.bar-header {
+  flex-grow: 2;
+}

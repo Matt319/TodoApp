@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-list {
+  margin-right: 10px;
+  flex-grow: 2;
+}

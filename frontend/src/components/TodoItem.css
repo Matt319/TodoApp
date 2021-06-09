@@ -1,0 +1,18 @@
+.item-wrapper {
+  background-color: lightgray;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.element-right-aligned {
+  flex-grow: 0;
+}
+
+.description {
+  flex-grow: 2;
+}

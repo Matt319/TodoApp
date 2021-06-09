@@ -1,0 +1,17 @@
+.Element-spacer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wrap {
+  display: inline-block;
+  flex-grow: 0;
+}
+
+.form {
+  display: inline-block;
+}
+
+.paper {
+  padding: 10px;
+}

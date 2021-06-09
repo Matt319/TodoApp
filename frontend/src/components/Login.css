@@ -1,0 +1,9 @@
+.Wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Element {
+  margin: 10px;
+}
