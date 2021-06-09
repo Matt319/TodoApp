@@ -2,6 +2,8 @@ How to use
 
 This project is split into two sections. /frontend contains all the React code and /backend contains all the Go code. Both the frontend and backend must be started seperately. I have included bash scripts to run which will install all the dependancies as well as start the service.
 
+The frontend default port is :3000 and the backend default port is :8080.
+
 If you don't have permission to run the bash file, you may need to run:
 
 `$ chmod u+x frontend.sh`
