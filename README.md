@@ -5,6 +5,7 @@ This project is split into two sections. /frontend contains all the React code a
 If you don't have permission to run the bash file, you may need to run:
 
 `$ chmod u+x frontend.sh`
+and
 `$ chmod u+x backend.sh`
 
 I also purposly uploaded the .env file for the backend and frontend since this is not a production application and it will make your setup much easier.
