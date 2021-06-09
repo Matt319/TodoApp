@@ -52,7 +52,7 @@ export default function TodoList(Props: TodoListProps) {
     }
 
     useEffect(() => {
-        fetch('http://localhost:8080/tasks', {
+        fetch(`http://localhost:${process.env.REACT_APP_SERVER_PORT}/tasks`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function TodoList(Props: TodoListProps) {
             });
         });
 
-        const ws = new W3CWebSocket(`ws://localhost:8080/ws?token=${Props.token}`)
+        const ws = new W3CWebSocket(`ws://localhost:${process.env.REACT_APP_SERVER_PORT}/ws?token=${Props.token}`)
         ws.onopen = () => {}
         ws.onmessage = (message) => {            
             let json = JSON.parse(message.data.toString())  // Convert message to JSON

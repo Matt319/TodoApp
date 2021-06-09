@@ -21,7 +21,7 @@ export default function AddTodo(Props: AddTodoProps) {
                     data.state = Number(data.state);  // Odd behaviour (state was being stored as a string)
 
                     // Do some async call to submit the todo
-                    fetch('http://localhost:8080/tasks', {
+                    fetch(`http://localhost:${process.env.REACT_APP_SERVER_PORT}/tasks`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

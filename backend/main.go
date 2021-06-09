@@ -2,10 +2,13 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 	_ "github.com/mattn/go-sqlite3"
 	"gopkg.in/olahol/melody.v1"
 )
@@ -37,6 +40,9 @@ func GinMiddleware(allowOrigin string) gin.HandlerFunc {
 // Main
 func main() {
 
+	// Load env file
+	godotenv.Load()
+
 	// Initialize Router
 	router := gin.Default()
 
@@ -51,7 +57,7 @@ func main() {
 	router.Use(gin.Recovery())
 
 	// Setup CORS
-	router.Use(GinMiddleware("http://localhost:3000"))
+	router.Use(GinMiddleware(fmt.Sprintf("http://localhost:%s", os.Getenv("CLIENT_PORT"))))
 
 	// Route Handlers
 	router.POST("/auth", Login)
@@ -72,7 +78,7 @@ func main() {
 		panic(err)
 	}
 
-	log.Fatal(router.Run(":8080"))
+	log.Fatal(router.Run(fmt.Sprintf(":%s", os.Getenv("SERVER_PORT"))))
 }
 
 // Middleware for authenticated endpoints

@@ -20,7 +20,7 @@ export default function TodoItem(Props: TodoItemProps) {
 
     // Handle delete button click
     function deleteTodo() {
-        fetch(`http://localhost:8080/tasks/${Props.tid}`, {
+        fetch(`http://localhost:${process.env.REACT_APP_SERVER_PORT}/tasks/${Props.tid}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export default function TodoItem(Props: TodoItemProps) {
                 let tidObj = { 'tid': Props.tid }
                 let body = Object.assign(tidObj, todo)
                 
-                fetch('http://localhost:8080/tasks', {
+                fetch(`http://localhost:${process.env.REACT_APP_SERVER_PORT}/tasks`, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
