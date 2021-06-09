@@ -1,4 +1,6 @@
-How to use
+**How To Use**
+
+Download -> Run the bash files -> Go to `http://localhost:3000`
 
 This project is split into two sections. /frontend contains all the React code and /backend contains all the Go code. Both the frontend and backend must be started seperately. I have included bash scripts to run which will install all the dependancies as well as start the service.
 
