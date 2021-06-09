@@ -38,7 +38,7 @@ export const todoSlice = createSlice({
             const todo = action.payload;
 
             var newTodos: TodoObj[] = []
-            const currentTodos: TodoObj[] = state.value
+            var currentTodos: TodoObj[] = state.value
 
             currentTodos.forEach(t => {
                 if (t.tid !== todo.tid) {
@@ -47,7 +47,6 @@ export const todoSlice = createSlice({
                     newTodos.push(todo)
                 }
             });
-
             state.value = newTodos;
         },
 

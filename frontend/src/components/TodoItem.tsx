@@ -71,7 +71,7 @@ export default function TodoItem(Props: TodoItemProps) {
                             <Field name='due' label='Due date' type='input' disablePast className='element-right-aligned' variant='inline' format='MM/dd/yyyy' required={true} onChange={(value: any) => formProps.setFieldValue('due', value)} as={DatePicker} />
                         </MuiPickersUtilsProvider>
 
-                        <IconButton type='submit' className='element-right-aligned' disabled={!formProps.dirty && !formProps.isSubmitting}>
+                        <IconButton type='submit' className='element-right-aligned' disabled={formProps.isSubmitting}>
                             <SaveIcon />
                         </IconButton>
 
